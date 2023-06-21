@@ -1,0 +1,819 @@
+@import "nullstyle.scss";
+
+// Подклюение шрифта
+@font-face {
+  font-family: "Balqis Script";
+  src: url("../шаблон с scss/fonts/AnyConv.com__Balqis.eot");
+  src: local(""),
+    url("../шаблон с scss/fonts/AnyConv.com__Balqis.otf") format("otf"),
+    url("../шаблон с scss/fonts/AnyConv.com__Balqis.svg") format("svg"),
+    url("../шаблон с scss/fonts/AnyConv.com__Balqis.woff") format("woff"),
+    url("../шаблон с scss/fonts/balqis.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap");
+body {
+  font-family: "Roboto Condensed";
+}
+// body {
+//   background-image: linear-gradient(to right top, #ffcc00 50%, #eee 50%);
+//   background-size: 100% calc(100% - 100vh + 5px);
+//   background-repeat: no-repeat;
+// }
+._container {
+  max-width: 1201px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+._ibg {
+  position: relative;
+  &img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+// Header menu/////////////////////////////////////////////////////////////////////////////////////
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  max-height: 50px;
+  background-color: #1d1d1f;
+  transition-duration: 0.5s;
+}
+
+.header__menu {
+  margin: 0px 5px 0px 5px;
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > *:not(:last-child) {
+    margin-right: 52px;
+  }
+}
+.menu__item {
+}
+
+.menu__link {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 116%;
+  color: #f5f5f7;
+  transition: 0.3s;
+  transition-duration: 0.3s;
+  opacity: 0.7;
+}
+.menu__link:hover {
+  opacity: 1;
+}
+.menu__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > *:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.number__icon img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.item_number {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 116%;
+  color: #f5f5f7;
+  opacity: 0.7;
+  transition-duration: 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Main/////////////////////////////////////////////////////////////////////////////////////
+.page {
+  flex: 1 1 auto;
+}
+// Main-block/////////////////////////////////////////////////////////////////////////////////////
+.page__main-block {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../шаблон с scss/img/bg.jpg") center/ cover no-repeat fixed;
+}
+@media (max-width: 1400px) {
+}
+.main__block {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.main-block__body {
+  position: absolute;
+
+  width: 100%;
+  top: 23.333%;
+  left: 0;
+}
+.main-block__title {
+  font-family: "Balqis Script";
+
+  font-size: 200px;
+  text-align: center;
+  line-height: 133%;
+  color: #000000;
+}
+.main-block__subtitle {
+  position: absolute;
+  left: 53%;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 40px;
+
+  color: #000000;
+  text-align: right;
+  margin-top: -65px;
+}
+.main-block__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+// page2////////////////////////////////////////////////////////////
+.page__story {
+}
+.story__block {
+  padding: 170px 0px 170px 0px;
+  //
+}
+
+.story__header {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 80px;
+}
+.story__title {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 133%;
+  color: #e2ab3f;
+}
+.story__subtitle {
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 116%;
+  color: #000000;
+
+  margin-left: 181px;
+}
+.story__body {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1560px;
+
+  & > *:not(:last-child) {
+    margin-right: 55px;
+  }
+}
+.story__slider {
+  flex: 0 1 61.538%;
+}
+.slider {
+}
+.story__description {
+  display: flex;
+  flex-direction: column;
+  flex: 38.461%;
+  justify-content: space-between;
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.story__text {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.story__text-another {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+.swiper-button-prev::after {
+  color: #ffffff;
+}
+.swiper-button-next::after {
+  color: #ffffff;
+}
+// page3////////////////////////////////////////////////////////////
+.page__rout {
+  padding-bottom: 170px;
+}
+.rout__block {
+}
+.rout__container {
+}
+._container {
+}
+.rout__columns {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1560px;
+  & .swiper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.rout__column-left {
+  flex: 0 1 38.461%;
+}
+.rout__column-left__header {
+  margin-bottom: 100px;
+}
+.column-left__title {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 133%;
+  color: #e2ab3f;
+}
+.column-left__subtitle-rout {
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 116%;
+  color: #000000;
+  margin-left: 242px;
+  margin-top: -25px;
+}
+.rout__column-left__text {
+  margin-bottom: 50px;
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.column-left__text__description {
+  & h4 {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+  }
+  & p {
+    display: block;
+    max-width: 296px;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+  }
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.rout__column-left__button {
+  max-width: 280px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background-color: #e2ab3f;
+  padding: 12px 45px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  & a {
+    display: block;
+    // text-align: center;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 116%;
+    text-align: center;
+    color: #000000;
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+.column-left__button__text a {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 116%;
+  text-align: center;
+  color: #000000;
+}
+
+// page4////////////////////////////////////////////////////////////
+
+.page__hotel {
+  padding-bottom: 170px;
+}
+.hotel__block {
+}
+.hotel__container {
+}
+._container {
+}
+.hotel__header {
+  margin-bottom: 100px;
+}
+.hotel__header__title {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 133%;
+  text-align: left;
+  color: #e2ab3f;
+}
+.hotel__header__subtitle {
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 116%;
+  color: #000000;
+  margin-left: 122px;
+  margin-top: -25px;
+}
+.hotel__body {
+  display: flex;
+  align-items: flex-start;
+  & > *:not(:last-child) {
+    margin-right: 99px;
+  }
+}
+.hotel__column-left {
+  flex: 0 1 41.736%;
+}
+.hotel__column-right {
+  flex: 0 1 58.263%;
+}
+.hotel__column-right__description {
+  margin-bottom: 80px;
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.hotel__column-right__text {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 116%;
+  color: #000000;
+  display: block;
+  text-align: left;
+}
+.hotel__column-right__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > *:not(:last-child) {
+    margin-right: 39px;
+  }
+}
+.hotel__column-right__image-left {
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.images__hotel {
+}
+.hotel__column-right__image-right {
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+// page5////////////////////////////////////////////////////////////
+
+.page__price {
+  padding-bottom: 170px;
+}
+.price__block {
+}
+.price__container {
+}
+._container {
+}
+.price__header {
+  margin-bottom: 100px;
+}
+.price__header__title {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 133%;
+
+  color: #e2ab3f;
+}
+.price__header_subtitle {
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 116%;
+  margin-left: 122px;
+  margin-top: -25px;
+  color: #000000;
+}
+.price__body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.price__body__description {
+  display: flex;
+  align-items: flex-start;
+  & > *:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+.price__body__description__left-column {
+  max-width: 530px;
+  & h4 {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+    margin-bottom: 59px;
+    text-align: left;
+  }
+}
+.column-text {
+  & p {
+    display: block;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 116%;
+    color: #000000;
+    text-align: left;
+  }
+  & p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.price__body__description__right-column {
+  max-width: 371px;
+  & h4 {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+    margin-bottom: 59px;
+    text-align: left;
+  }
+}
+
+.price__body__images {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.price__body__images-one {
+  position: absolute;
+  top: -108px;
+  left: 13px;
+}
+.price__body__images-two {
+  position: absolute;
+  top: 58px;
+  left: 86px;
+}
+.price__body__images-three {
+  position: absolute;
+  left: 128px;
+  top: -250px;
+}
+
+// page6////////////////////////////////////////////////////////////
+.page__price-form {
+  padding-bottom: 170px;
+}
+.price-form__container {
+}
+
+.price-form__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.price-form__column-left {
+  margin-left: 106px;
+  padding-top: 100px;
+}
+.form__column-left__head {
+}
+.column-left__title {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 72%;
+  color: #e2ab3f;
+  text-align: left;
+
+  margin-bottom: 40px;
+  & span {
+    display: block;
+    margin-left: 140px;
+
+    font-family: "Roboto Condensed";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+.column-left__subtitle {
+  font-family: "Balqis Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 72%;
+  color: #e2ab3f;
+  text-align: left;
+  margin-left: 122px;
+
+  & span {
+    margin-top: 10px;
+    display: block;
+    margin-left: 122px;
+
+    font-family: "Roboto Condensed";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 116%;
+    color: #000000;
+    text-align: left;
+  }
+}
+.column-left__form {
+}
+.price-form__column-right {
+}
+.column-left__form {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    text-align: center;
+    color: #000000;
+  }
+}
+.inputBox {
+  position: relative;
+  width: 383px;
+  margin-top: 49px;
+  transition-duration: 0.5s;
+  & input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+
+    transition-duration: 0.5s;
+    z-index: 10;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  & span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 116%;
+    color: #000000;
+    transition-duration: 0.5s;
+  }
+  i {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #e2ab3f;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  color: #e2ab3f;
+  transform: translateX(-10px) translateY(-35px);
+  font-size: 15px;
+}
+.inputBox input:focus ~ i,
+.inputBox input:valid ~ i {
+  height: 44px;
+  opacity: 0.8;
+}
+.form__button {
+  margin: 0 auto;
+  width: 280px;
+  margin-top: 25px;
+
+  border: none;
+  outline: none;
+  background-color: #e2ab3f;
+  padding: 12px 45px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+  & a {
+    display: block;
+
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 116%;
+    text-align: center;
+    color: #000000;
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.footer {
+  min-height: 100vh;
+  background: url("../шаблон с scss/img/bg.jpg") center / cover no-repeat fixed;
+}
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+._container {
+}
+.footer__conacts {
+  margin: 96px 0px 0px 96px;
+  position: relative;
+
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.footer__phone {
+  & span {
+    display: block;
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+  position: absolute;
+  top: 200px;
+  left: 110px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 116%;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+.footer__email {
+  & span {
+    display: block;
+    margin-right: 10px;
+    margin-left: -20px;
+  }
+  position: absolute;
+  top: 251px;
+  left: 83px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 116%;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+.footer__sicial {
+  position: absolute;
+  top: 310px;
+  left: 120px;
+  display: flex;
+  align-items: center;
+  & > *:not(:last-child) {
+    margin-right: 15px;
+  }
+  & img {
+    transition-duration: 0.5s;
+  }
+}
+.footer__sicial img:hover {
+  opacity: 0.6;
+}
+.footer__conacts {
+  & h2 {
+    display: block;
+    font-family: "Balqis Script";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 86px;
+    line-height: 116%;
+    color: #e2ab3f;
+    position: absolute;
+    z-index: 11;
+    top: 80px;
+    left: 43px;
+  }
+}
+.footer__title {
+  & h2 {
+    font-family: "Balqis Script";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 86px;
+    line-height: 115px;
+    color: #000000;
+  }
+}
